@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+
+<!-- Creates the id used for the large image. -->
+<style type="text/css">  
+	#large_photo{  
+		height:400px;
+		width:500px;
+		border: 1px solid black;
+		margin-right: 13px;
+		}
+</style>
+
+
+<!--  Creates the function that is used to change which image appears in the large display. -->
+<script>  
+	var pic_name
+
+	function imageBig(pic_name) { //passes in a name through
+	x=document.getElementById("large_photo").src=pic_name;  
+	//Sets the filename of the large image to be the name that was passed through.
+								}
+	
+</script>
+
+</head>
+
+<body>
+
+<table>
+	<tr>	
+		<td>  <!--  This is where the large image appears.  -->
+			<img id="large_photo" src="smileyFace1.jpg" alt="large photo" />
+		<td>
+	
+		<td>  <!-- Some random generated text. -->
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+			Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+			when an unknown printer took a galley of type and scrambled it to make a type
+			specimen book. It has survived not only five centuries, but also the leap into
+			electronic typesetting, remaining essentially unchanged. It was popularised in
+			the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+			and more recently with desktop publishing software like Aldus PageMaker including 
+			versions of Lorem Ipsum.
+			</p>
+		</td>
+    </tr>
+	
+	<tr>
+		<td>  <!-- The three smaller images appear here. -->
+			<img src="smileyFace1.jpg" onclick="imageBig('smileyFace1.jpg')" /> <!-- Places name in function. -->
+			<img src="smileyFace2.jpg" onclick="imageBig('smileyFace2.jpg');"/> <!-- Places name in function. -->
+			<img src="smileyFace3.jpg" onclick="imageBig(this.src)" /> <!-- Takes name from current HTML tag. -->
+		</td>
+	</tr>
+</table>	
+	
+<!--  Instead of using onclick you can directly link calling the function with the code below.
+
+<a href="javascript:imageBig('smileyFace1.jpg');" > <img src="smileyFace1.jpg" /> </a>
+<a href="javascript:imageBig('smileyFace2.jpg');" > <img src="smileyFace2.jpg" /> </a>
+<a href="javascript:imageBig('smileyFace3.jpg');" > <img src="smileyFace3.jpg" /> </a>
+		
+-->		
+
+
+</body>
+
+</html>
